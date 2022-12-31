@@ -10,7 +10,6 @@ def Mnożenie(x, y):
 def Dzielenie(x, y):
     return x / y
 
-'Korzystając z biblioteki logging, informujemy użytkownika, jakie działanie wykonamy i jakie będą jego argumenty (np. Dodaję 1 i 3).'
 while True:
     liczba = int(input("Podaj działanie, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie: "))
 
@@ -29,6 +28,7 @@ while True:
             print(Dzielenie(x, y))
     else:
         print("Nieprawidłowa liczba, podaj liczbę odpowiadającą działaniu.")
-'co do dodania możliwości dodawania i mnożenia większej ilości elementów muszę się Ciebie poradzić - myślałem' \
-' o dodawaniu do listy kolejnych wpisanych elementów'
     break
+
+'co do dodania możliwości dodawania i mnożenia większej ilości elementów muszę się Ciebie poradzić - myślałem'
+' o dodawaniu do listy kolejnych wpisanych elementów'
