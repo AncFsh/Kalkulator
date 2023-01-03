@@ -1,13 +1,13 @@
 import logging
 logging.basicConfig(level=logging.INFO)
 
-def Dodawanie(x, y):
+def add(x, y):
     return x + y
-def Odejmowanie(x, y):
+def substract(x, y):
     return x - y
-def Mnożenie(x, y):
+def multiply(x, y):
     return x * y
-def Dzielenie(x, y):
+def divide(x, y):
     return x / y
 
 while True:
@@ -19,13 +19,13 @@ while True:
         logging.info(f"Podane liczby to: {x} i {y}")
 
         if liczba == 1:
-            print(Dodawanie(x, y))
+            print(add(x, y))
         elif liczba == 2:
-            print(Odejmowanie(x, y))
+            print(substract(x, y))
         elif liczba == 3:
-            print(Mnożenie(x, y))
+            print(multiply(x, y))
         elif liczba == 4:
-            print(Dzielenie(x, y))
+            print(divide(x, y))
     else:
         print("Nieprawidłowa liczba, podaj liczbę odpowiadającą działaniu.")
     break
