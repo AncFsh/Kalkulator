@@ -29,6 +29,3 @@ while True:
     else:
         print("Nieprawidłowa liczba, podaj liczbę odpowiadającą działaniu.")
     break
-
-'co do dodania możliwości dodawania i mnożenia większej ilości elementów muszę się Ciebie poradzić - myślałem'
-' o dodawaniu do listy kolejnych wpisanych elementów'
