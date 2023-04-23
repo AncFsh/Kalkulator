@@ -1,31 +1,49 @@
-import logging
-logging.basicConfig(level=logging.INFO)
+def add(numbers):
+    result = 0
+    for number in numbers:
+        result += number
+    return result
 
-def add(x, y):
-    return x + y
-def substract(x, y):
-    return x - y
-def multiply(x, y):
-    return x * y
-def divide(x, y):
-    return x / y
 
-while True:
-    liczba = int(input("Podaj działanie, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie: "))
+def subtract(numbers):
+    result = numbers[0]
+    for number in numbers[1:]:
+        result -= number
+    return result
 
-    if liczba in (1, 2, 3, 4):
-        x = float(input(f'Podaj pierwszą liczbę: '))
-        y = float(input(f'Podaj drugą liczbę: '))
-        logging.info(f"Podane liczby to: {x} i {y}")
 
-        if liczba == 1:
-            print(add(x, y))
-        elif liczba == 2:
-            print(substract(x, y))
-        elif liczba == 3:
-            print(multiply(x, y))
-        elif liczba == 4:
-            print(divide(x, y))
+def multiply(numbers):
+    result = 1
+    for number in numbers:
+        result *= number
+    return result
+
+
+def divide(numbers):
+    result = numbers[0]
+    for number in numbers[1:]:
+        if number == 0:
+            return "Dzielenie przez zero. Kalkulacja nieudana."
+        result /= number
+    return result
+
+
+def calculator():
+    operation = input("Wybierz operację (+, -, *, /): ")
+    numbers = input("Podaj liczby oddzielone spacjami: ").split()
+    numbers = [float(number) for number in numbers]
+
+    if operation == "+":
+        result = add(numbers)
+    elif operation == "-":
+        result = subtract(numbers)
+    elif operation == "*":
+        result = multiply(numbers)
+    elif operation == "/":
+        result = divide(numbers)
     else:
-        print("Nieprawidłowa liczba, podaj liczbę odpowiadającą działaniu.")
-    break
+        return "Wybierz dostępną operację."
+
+    return result
+
+print(calculator())
